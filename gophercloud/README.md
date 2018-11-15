@@ -1,15 +1,15 @@
-# Gophercloud: an OpenStack SDK for Go
+# Gophercloud：OpenStack的Go SDK
 [![Build Status](https://travis-ci.org/gophercloud/gophercloud.svg?branch=master)](https://travis-ci.org/gophercloud/gophercloud)
 [![Coverage Status](https://coveralls.io/repos/github/gophercloud/gophercloud/badge.svg?branch=master)](https://coveralls.io/github/gophercloud/gophercloud?branch=master)
 
-Gophercloud is an OpenStack Go SDK.
+Gophercloud是OpenStack的GoSDK.
 
-## Useful links
+## 有用的链接
 
-* [Reference documentation](http://godoc.org/github.com/gophercloud/gophercloud)
-* [Effective Go](https://golang.org/doc/effective_go.html)
+* [参考文档](http://godoc.org/github.com/gophercloud/gophercloud)
+* [高效的Go语言](https://golang.org/doc/effective_go.html)
 
-## How to install
+## 如何安装
 
 Before installing, you need to ensure that your [GOPATH environment variable](https://golang.org/doc/code.html#GOPATH)
 is pointing to an appropriate directory where you want to install Gophercloud:
@@ -35,9 +35,9 @@ godep save ./...
 This will install all the source files you need into a `Godeps/_workspace` directory, which is
 referenceable from your own source files when you use the `godep go` command.
 
-## Getting started
+## 入门指南
 
-### Credentials
+### 证书
 
 Because you'll be hitting an API, you will need to retrieve your OpenStack
 credentials and either store them as environment variables or in your local Go
@@ -58,7 +58,7 @@ download a bash file that exports all of your access details to environment
 variables. To execute the file, run `source admin-openrc.sh` and you will be
 prompted for your password.
 
-### Authentication
+### 认证
 
 Once you have access to your credentials, you can begin plugging them into
 Gophercloud. The next step is authentication, and this is handled by a base
@@ -94,7 +94,7 @@ The `ProviderClient` is the top-level client that all of your OpenStack services
 derive from. The provider contains all of the authentication details that allow
 your Go code to access the API - such as the base URL and token ID.
 
-### Provision a server
+### 提供服务器
 
 Once we have a base Provider, we inject it as a dependency into each OpenStack
 service. In order to work with the Compute API, we need a Compute service
@@ -125,24 +125,24 @@ The above code sample creates a new server with the parameters, and embodies the
 new resource in the `server` variable (a
 [`servers.Server`](http://godoc.org/github.com/gophercloud/gophercloud) struct).
 
-## Advanced Usage
+## 高级用法
 
 Have a look at the [FAQ](./docs/FAQ.md) for some tips on customizing the way Gophercloud works.
 
-## Backwards-Compatibility Guarantees
+## 向后兼容保证
 
 None. Vendor it and write tests covering the parts you use.
 
-## Contributing
+## 贡献
 
-See the [contributing guide](./.github/CONTRIBUTING.md).
+请参阅[贡献指南](./.github/CONTRIBUTING.md)。
 
-## Help and feedback
+## 帮助及反馈
 
 If you're struggling with something or have spotted a potential bug, feel free
 to submit an issue to our [bug tracker](https://github.com/gophercloud/gophercloud/issues).
 
-## Thank You
+## 鸣谢
 
 We'd like to extend special thanks and appreciation to the following:
 
