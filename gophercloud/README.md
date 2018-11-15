@@ -2,7 +2,7 @@
 [![Build Status](https://travis-ci.org/gophercloud/gophercloud.svg?branch=master)](https://travis-ci.org/gophercloud/gophercloud)
 [![Coverage Status](https://coveralls.io/repos/github/gophercloud/gophercloud/badge.svg?branch=master)](https://coveralls.io/github/gophercloud/gophercloud?branch=master)
 
-Gophercloud是OpenStack的GoSDK.
+Gophercloud是OpenStack的GoSDK。
 
 ## 友情链接
 
@@ -28,24 +28,19 @@ go get github.com/gophercloud/gophercloud
 godep save ./...
 ```
 
-这将会把你所需的全部源文件安装到`Godeps/_workspace`目录中，
-which is referenceable from your own source files when you use the `godep go` command.
+这将会把你所需的全部源文件安装到`Godeps/_workspace`目录中，当你使用`godep go`命令时，你自己的源文件中可以引用`Godeps/_workspace`目录中的源文件。
 
 ## 入门指南
 
 ### 证书
 
-Because you'll be hitting an API, you will need to retrieve your OpenStack
-credentials and either store them as environment variables or in your local Go
-files. The first method is recommended because it decouples credential
-information from source code, allowing you to push the latter to your version
-control system without any security risk.
+因为你将会使用一些API，因此你需要获取你的OpenStack证书，并把证书存储在环境变量或本地Go文件中。推荐使用第一种方式，因为这样可以把证书信息从源码中分离出来，让你在没有任何安全风险的情况下，把源码push到你的版本控制系统中。
 
-You will need to retrieve the following:
+你需要获取以下信息：
 
-* username
-* password
-* a valid Keystone identity URL
+* 用户名（username）
+* 密码（password）
+* 有效的Keystone identity URL
 
 For users that have the OpenStack dashboard installed, there's a shortcut. If
 you visit the `project/access_and_security` path in Horizon and click on the
@@ -56,10 +51,7 @@ prompted for your password.
 
 ### 认证
 
-Once you have access to your credentials, you can begin plugging them into
-Gophercloud. The next step is authentication, and this is handled by a base
-"Provider" struct. To get one, you can either pass in your credentials
-explicitly, or tell Gophercloud to use environment variables:
+一旦你有了访问证书，你就可以开始把它们插入到Gophercloud中。下一步是身份认证，这是由一个基础的"Provider"结构体（struct）来处理的。要获取一个Provider，你可以显示地传递你的证书，或者告诉Gophercloud使用环境变量。
 
 ```go
 import (
