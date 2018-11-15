@@ -4,25 +4,21 @@
 
 Gophercloud是OpenStack的GoSDK.
 
-## 有用的链接
+## 友情链接
 
 * [参考文档](http://godoc.org/github.com/gophercloud/gophercloud)
-* [高效的Go语言](https://golang.org/doc/effective_go.html)
+* [高效的Go](https://golang.org/doc/effective_go.html)
 
 ## 如何安装
 
-Before installing, you need to ensure that your [GOPATH environment variable](https://golang.org/doc/code.html#GOPATH)
-is pointing to an appropriate directory where you want to install Gophercloud:
+安装之前，需要确保你的[GOPATH环境变量](https://golang.org/doc/code.html#GOPATH)指向你想要安装Gophercloud的目录。
 
 ```bash
 mkdir $HOME/go
 export GOPATH=$HOME/go
 ```
 
-To protect yourself against changes in your dependencies, we highly recommend choosing a
-[dependency management solution](https://github.com/golang/go/wiki/PackageManagementTools) for
-your projects, such as [godep](https://github.com/tools/godep). Once this is set up, you can install
-Gophercloud as a dependency like so:
+为了使自己不受依赖变化的影响，我们强烈建议你给项目选择一个[依赖管理解决方案](https://github.com/golang/go/wiki/PackageManagementTools)，例如[godep](https://github.com/tools/godep)。一旦设置好这些，你就可以安装Gophercloud依赖，如下所示：
 
 ```bash
 go get github.com/gophercloud/gophercloud
@@ -32,8 +28,8 @@ go get github.com/gophercloud/gophercloud
 godep save ./...
 ```
 
-This will install all the source files you need into a `Godeps/_workspace` directory, which is
-referenceable from your own source files when you use the `godep go` command.
+这将会把你所需的全部源文件安装到`Godeps/_workspace`目录中，
+which is referenceable from your own source files when you use the `godep go` command.
 
 ## 入门指南
 
