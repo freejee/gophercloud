@@ -28,8 +28,7 @@ go get github.com/gophercloud/gophercloud
 godep save ./...
 ```
 
-这将会把你所需的全部源文件安装到`Godeps/_workspace`目录中，
-which is referenceable from your own source files when you use the `godep go` command.
+这将会把你所需的全部源文件安装到`Godeps/_workspace`目录中，当你使用`godep go`命令时，你自己的源文件中可以引用`Godeps/_workspace`目录中的源文件。
 
 ## 入门指南
 
